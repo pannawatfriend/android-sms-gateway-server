@@ -163,8 +163,8 @@ $RECYCLE.BIN/
 
 /tmp
 
-/configs/*
-!/configs/*.example.*
+# /configs/*
+# !/configs/*.example.*
 
 /certs
 

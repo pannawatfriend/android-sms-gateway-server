@@ -9,13 +9,14 @@ services:
     environment:
       - DEBUG=
       - CONFIG_PATH=config.yml
-      - GOOSE_DBSTRING=root:xPAuGtudDBExcWOzhBIqRehttnwVcMUv@tcp(jdbc:mysql://root:xPAuGtudDBExcWOzhBIqRehttnwVcMUv@mysql.railway.internal:3306/railway)/sms?parseTime=true
+      # - GOOSE_DBSTRING=root:xPAuGtudDBExcWOzhBIqRehttnwVcMUv@tcp(jdbc:mysql://root:xPAuGtudDBExcWOzhBIqRehttnwVcMUv@mysql.railway.internal:3306/railway)/sms?parseTime=true
+      - GOOSE_DBSTRING=root:xPAuGtudDBExcWOzhBIqRehttnwVcMUv@tcp(mysql.railway.internal:3306)/railway?parseTime=true
       - HTTP__LISTEN=0.0.0.0:3000
       - DATABASE__HOST=jdbc:mysql://root:xPAuGtudDBExcWOzhBIqRehttnwVcMUv@mysql.railway.internal:3306/railway
       - DATABASE__PORT=3306
       - DATABASE__USER=root
       - DATABASE__PASSWORD=xPAuGtudDBExcWOzhBIqRehttnwVcMUv
-      - DATABASE__DATABASE=sms
+      - DATABASE__DATABASE=railway
     ports:
       - "3000:3000"
     # volumes:
